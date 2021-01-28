@@ -75,7 +75,19 @@ class Airplane {
   */
   
  class Car {
-    
+    constructor(model, milesPerGallon) {
+      this.model = model;
+      this.milesPerGallon = milesPerGallon;
+      this.tank = 0;
+      this.odometer = 0;
+    }
+    fill(gallons){
+      this.tank = gallons + this.tank;
+    }
+    drive(distance){
+      this.odometer = this.odometer + distance;
+      this.tank = this.tank - distance; 
+    }
   }
   
   /*
@@ -91,7 +103,11 @@ class Airplane {
           + {name} and {location} of course come from the instance's own properties.
   */
  class Lambdasian {
-    
+    constructor(name, age, location){
+      this.name = name;
+      this.age = age;
+      this.location = location;
+    }
   }
   
   /*
